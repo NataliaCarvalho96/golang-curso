@@ -30,6 +30,23 @@ func main() {
 	array2[1] = "Posição alterada"
 	fmt.Println(slice2) //o slice nesse caso funciona similar a um ponteiro.
 
+	//Arrays internos
+	fmt.Println("----------------")
+
+	slice3 := make([] float32, 10, 11) //Neste exemplo a função 'make' cria um array de 15 posições que pega as 10 primeiras posições.
+
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) //Length
+	fmt.Println(cap(slice3)) //Capacity
+
+	fmt.Println("----------------")
+	slice3 = append(slice3, 5)
+	slice3 = append(slice3, 6)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) 
+	fmt.Println(cap(slice3))
+	// No exemplo acima, o slice estouraria o tamanho indicado, sendo assim o GO cria outro array para referência e dobra de tamanho, e isso é contínuo. Por esse motivo, o slie não possui um tamanho limite, pois, o mesmo continua a aumentar sempre que necessário.
+
 
 
 
